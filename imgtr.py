@@ -3,8 +3,7 @@
 # Form implementation generated from reading ui file 'imgtr.ui'
 #
 # Created by: PyQt5 UI code generator 5.10.1
-#
-# WARNING! All changes made in this file will be lost!
+
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
@@ -22,15 +21,7 @@ model = ResNet50(weights='imagenet')
 target_size = (224, 224)
 
 def predict(model, img, target_size, top_n=3):
-  """Run model prediction on image
-  Args:
-    model: keras model
-    img: PIL format image
-    target_size: (w,h) tuple
-    top_n: # of top predictions to return
-  Returns:
-    list of predicted labels and their probabilities
-  """
+
   if img.size != target_size:
     img = img.resize(target_size)
 
